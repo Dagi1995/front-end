@@ -1,0 +1,277 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>Admin</title> 
+	<link rel="stylesheet"
+		href="style.css"> 
+	<link rel="stylesheet"
+		href="responsive.css"> 
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">Admin</div> 
+			<img src="../Assets/menu-svgrepo-com.svg"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> 
+		</div> 
+
+		<div class="searchbar"> 
+			<input type="text"
+				placeholder="Search"> 
+			<div class="searchbtn"> 
+			<img src="../Assets/search-svgrepo-com.svg"
+				 class="icn srchicn"
+				 alt="search-icon"> 
+			</div> 
+		</div> 
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+				class="icn"
+				alt=""> 
+			<div class="dp"> 
+			<img 	src="../Assets/avatar-boy-svgrepo-com.svg" 
+					class="dpicn"
+					alt="dp"> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<ul class="nav-upper-options"> 
+					<a href="./index.html"><li class="nav-option option1"> 
+						<img src="../Assets/dashboard-svgrepo-com.svg"
+							class="nav-img"
+							alt="dashboard"> 
+						<h3>Overview </h3> 
+					</li></a> 
+
+					<a href="./orders.html"><li class="nav-option option2"> 
+						<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+							class="nav-img"
+							alt="articles"> 
+						<h3>Orders</h3> 
+					</li></a> 
+
+					<a href="./invoices.html"><li class="nav-option option3"> 
+						<img src= "../Assets/invoice-electronic-line-svgrepo-com.svg"
+							class="nav-img"
+							alt="report"> 
+						<h3> Invoices</h3> 
+					</li></a> 
+
+					<a href="./logs.html"><li class="nav-option option4"> 
+						<img src= "../Assets/audit-report-svgrepo-com.svg"
+							class="nav-img"
+							alt="institution"> 
+						<h3> Logs</h3> 
+					</li></a> 
+
+					<a href="./settings.html"><li class="nav-option highlight option6"> 
+						<img src= "../Assets/setting-3-svgrepo-com.svg"
+							class="nav-img"
+							alt="settings"> 
+						<h3> Settings</h3> 
+					</li></a> 
+
+					<a href="./logout"><li class="nav-option logout"> 
+						<img src= "../Assets/logout-svgrepo-com.svg"
+							class="nav-img"
+							alt="logout"> 
+						<h3>Logout</h3> 
+					</li></a> 
+
+				</ul> 
+			</nav>  
+		</div> 
+
+		<div class="main"> 
+            <h1>Menu Managment</h1>
+            <h6>Add, remove and edit your menu here.</h6>
+
+            <div class="report-container"> 
+				<div class="Menu-report">
+					<div class="report-header"> 
+						<h1 class="MenuS">Menus</h1> 
+                        <button id="modal">Add New Menu</button>
+						<dialog id="add-menu-dialog">
+							<form>
+							  <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+							  <h2 id="dialogid">Add Menu</h2>
+							  <p>All fields are required</p>
+							  <input type="hidden" value="" name="menu-id"  hidden/>
+							  
+							  <div class="form-group">
+								<label for="name">Menu Name:</label>
+								<input id="name" type="text" name="name" placeholder="Menu Name" required />
+							  </div>
+							  
+							  <div class="form-group">
+								<label for="price">Price:</label>
+								<input id="price" type="number" name="price" placeholder="Price" required />
+							  </div>
+							  
+							  <div class="form-group">
+								<label for="description">Description:</label>
+								<input id="description" type="text" name="description" placeholder="Description" required />
+							  </div>
+							  
+							  <div class="form-group">
+								<label for="category">Category:</label>
+								<select id="category" name="category">
+								  <option>Drink</option>
+								  <option>Dinner</option>
+								  <option>Lunch</option>
+								</select>
+							  </div>
+
+							  <div class="form-group">
+								<label for="image">Image:</label>
+								<input id="image" type="file" name="image" accept="image/*" required />
+							  </div>
+
+							  
+							  <div class="form-group">
+								<button type="submit" formmethod="post">Submit</button>
+							  </div>
+							</form>
+						  </dialog>
+					</div> 
+					<div class="report-body">
+						<table>
+							<thead>
+							  <tr>
+								<th>Menu Image</th>
+                                <th>Menu Name</th>
+								<th>Category</th>
+								<th>Description</th>
+								<th>Price</th>
+                                <th>Actions</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr data-menu-id="1">
+								<td><img width="40" height="40" src="/Assets/image-svgrepo-com.svg" alt="" /></td>
+								<td>Fresh Juice 1</td>
+								<td>Drink</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+                                <td class="actions">
+                                    <button class="edit-modal">Edit</button>
+                                    <button class="removeBtn">Remove</button>
+                                </td>
+							  </tr>
+                              <tr data-menu-id="2">
+								<td><img width="40" height="40" src="/Assets/image-svgrepo-com.svg" alt="" /></td>
+								<td value="Fresh juice">Fresh Juice 2</td>
+								<td>Dinner</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+                                <td class="actions">
+                                    <button class="edit-modal">Edit</button>
+                                    <button class="removeBtn">Remove</button>
+                                </td>
+							  </tr>
+                              <tr data-menu-id="3">
+								<td><img width="40" height="40" src="/Assets/image-svgrepo-com.svg" alt="" /></td>
+								<td>Fresh Juice 3</td>
+								<td>Drink</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+                                <td class="actions">
+                                    <button class="edit-modal">Edit</button>
+                                    <button class="removeBtn">Remove</button>
+                                </td>
+							  </tr>
+							  <!-- Add more rows as needed -->
+							</tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div> 
+	<script>
+		// menu dialog
+		const dialog = document.getElementById('add-menu-dialog');
+		const jsbutton = document.getElementById('jsbutton');
+		const modal = document.getElementById('modal');
+		// edit dialog
+		const editDialogs = document.querySelectorAll(".edit-modal");
+
+
+		modal.addEventListener('click', (event) => {
+		dialog.showModal();
+		});
+
+		jsbutton && jsbutton.addEventListener('click', (event) => {
+		dialog.close();
+		fillDialogFields(null);
+		});
+
+		function fillDialogFields(row) {
+		const form = dialog.children.item(0);
+
+		console.log()
+		if(row != null) {
+
+			form.children.item(1).textContent = "Edit Menu";
+			form.elements.name.value = row.name;
+			form.elements.category.value = row.category;
+			form.elements.description.value = row.description;
+			form.elements.price.valueAsNumber = row.price;
+			form.elements["menu-id"].value = row.id
+		} else {
+			form.children.item(1).textContent = "Add Menu";
+			form.elements.name.value = "";
+			form.elements.category.value = "";
+			form.elements.description.value = "";
+			form.elements.price.valueAsNumber = "";
+		}
+
+		}
+
+
+		editDialogs.forEach( item  => {
+		const parent = item.parentNode.parentElement;
+		const children = parent.children;
+		const editBtn = children.item(5).children.item(0);
+
+		// console.log()
+
+		editBtn.addEventListener("click", (e) => {
+			const row = {
+			img : children.item(0).firstElementChild.getAttribute('src'),
+			name : children.item(1).firstChild.textContent,
+			category : children.item(2).firstChild.textContent,
+			description : children.item(3).firstChild.textContent,
+			price : children.item(4).firstChild.textContent,
+			id : parent.getAttribute('data-menu-id')
+			}
+		
+			fillDialogFields(row);
+			dialog.showModal();
+		})
+
+		});
+	</script> 
+</body> 
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>Admin</title> 
+	<link rel="stylesheet"
+		href="style.css"> 
+	<link rel="stylesheet"
+		href="responsive.css"> 
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">Admin</div> 
+			<img src="../Assets/menu-svgrepo-com.svg"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> 
+		</div> 
+
+		<div class="searchbar"> 
+			<input type="text"
+				placeholder="Search"> 
+			<div class="searchbtn"> 
+			<img src="../Assets/search-svgrepo-com.svg"
+				 class="icn srchicn"
+				 alt="search-icon"> 
+			</div> 
+		</div> 
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+				class="icn"
+				alt=""> 
+			<div class="dp"> 
+			<img 	src="../Assets/avatar-boy-svgrepo-com.svg" 
+					class="dpicn"
+					alt="dp"> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<ul class="nav-upper-options"> 
+					<a href="./index.html"><li class="nav-option option1"> 
+						<img src="../Assets/dashboard-svgrepo-com.svg"
+							class="nav-img"
+							alt="dashboard"> 
+						<h3>Overview </h3> 
+					</li></a> 
+
+					<a href="./orders.html"><li class="nav-option highlight option2"> 
+						<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+							class="nav-img"
+							alt="articles"> 
+						<h3>Orders</h3> 
+					</li></a> 
+
+					<a href="./invoices.html"><li class="nav-option option3"> 
+						<img src= "../Assets/invoice-electronic-line-svgrepo-com.svg"
+							class="nav-img"
+							alt="report"> 
+						<h3> Invoices</h3> 
+					</li></a> 
+
+					<a href="./logs.html"><li class="nav-option option4"> 
+						<img src= "../Assets/audit-report-svgrepo-com.svg"
+							class="nav-img"
+							alt="institution"> 
+						<h3> Logs</h3> 
+					</li></a> 
+
+					<a href="./settings.html"><li class="nav-option option6"> 
+						<img src= "../Assets/setting-3-svgrepo-com.svg"
+							class="nav-img"
+							alt="settings"> 
+						<h3> Settings</h3> 
+					</li></a> 
+
+					<a href="./logout.html"><li class="nav-option logout"> 
+						<img src= "../Assets/logout-svgrepo-com.svg"
+							class="nav-img"
+							alt="logout"> 
+						<h3>Logout</h3> 
+					</li></a> 
+
+				</ul> 
+			</nav> 
+		</div> 
+		<div class="main"> 
+
+			<div class="searchbar2"> 
+				<input type="text"
+					name=""
+					id=""
+					placeholder="Search"> 
+				<div class="searchbtn"> 
+				<img 	src="../Assets/search-svgrepo-com.svg"
+						class="icn srchicn"
+						alt="search-button"> 
+				</div> 
+			</div> 
+
+			<div class="box-container"> 
+				<div class="box box1"> 
+					<div class="text"> 
+                        <section class="Active Order">
+                            <h2>Active Order</h2>
+                          
+                            <h3>+2</h3>
+                            <p>are pending</p>
+                         </section>
+            
+					</div> 
+
+					<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+						alt="Views"> 
+				</div> 
+
+				<div class="box box2"> 
+					<div class="text"> 
+						<section class="">
+                            <h2>Order Cancelled</h2>
+                           
+                            <h3>+5</h3>
+                            <p>orders are cancelled</p>
+                            
+                        </section>
+					</div> 
+
+					<img src= "../Assets/cart-cross-svgrepo-com.svg"
+						alt="likes"> 
+				</div> 
+
+                <div class="box box3"> 
+					<div class="text"> 
+						<section class="order confirmed">
+                            <h2>
+                                Order Confirmed
+                            </h2>
+                            <h3>+13</h3>
+                            <p>Orders are deliverd</p>                            
+                        </section>
+					</div> 
+
+					 <img src= "../Assets/cart-check-svgrepo-com.svg"
+						alt="likes"> 
+				</div> 
+			</div>
+			<div class="report-container"> 
+				<div class="order-report">
+					<div class="report-header"> 
+						<h1 class="ORDERS">Orders</h1> 
+					</div> 
+					<div class="report-body">
+						<table>
+							<thead>
+							  <tr>
+								<th>Order ID</th>
+								<th>Order Date</th>
+								<th>Items</th>
+								<th>Total Amount</th>
+								<th>Payment Status</th>
+								<th>Order Status</th>
+                                <th>Actions</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>A9</td>
+								<td>January 30, 2024</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+								<td><span class="label label-success">Paid</span></td>
+								<td><span class="label label-warning">PENDING</span></td>
+                                <td>
+                                    <button>Cancel</button>
+                                </td>
+							  </tr>
+							  <tr>
+								<td>A7</td>
+								<td>January 30, 2024</td>
+								<td>Special Burger</td>
+								<td>520</td>
+								<td><span class="label label-success">Paid</span></td>
+								<td><span class="label label-processing">Processing</span></td>
+                                <td>
+                                    <button>Cancel</button>
+                                </td>
+							  </tr>
+							  <tr>
+								<td>A4</td>
+								<td>January 30, 2024</td>
+								<td>Pizza</td>
+								<td>310</td>
+								<td><span class="label label-cancelled">unPaid</span></td>
+								<td><span class="label label-cancelled">Cancelled</span></td>
+                                <td>
+                                    <button>Cancel</button>
+                                </td>
+							  </tr>
+							  <tr>
+								<td>A6</td>
+								<td>January 30, 2024</td>
+								<td>Burger</td>
+								<td>450</td>
+								<td><span class="label label-success">Paid</span></td>
+								<td><span class="label label-success">Completed</span></td>
+                                <td>
+                                    <button>Cancel</button>
+                                </td>
+							  </tr>
+							  <!-- Add more rows as needed -->
+							</tbody>
+						  </table>
+					</div>
+				</div>
+			</div> 
+		</div> 
+	</div> 
+
+	<script src="./script.js"></script> 
+</body> 
+</html>

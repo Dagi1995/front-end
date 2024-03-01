@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>Admin</title> 
+	<link rel="stylesheet"
+		href="style.css"> 
+	<link rel="stylesheet"
+		href="responsive.css"> 
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">Admin</div> 
+			<img src="../Assets/menu-svgrepo-com.svg"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> 
+		</div> 
+
+		<div class="searchbar"> 
+			<input type="text"
+				placeholder="Search"> 
+			<div class="searchbtn"> 
+			<img src="../Assets/search-svgrepo-com.svg"
+				 class="icn srchicn"
+				 alt="search-icon"> 
+			</div> 
+		</div> 
+
+		<div class="message"> 
+			<div class="circle"></div> 
+
+			<a href=./cart.html><img src= "../Assets/cart-shopping-svgrepo-com.svg"
+				class="icn"
+				alt=""> </a>
+			<div class="dp"> 
+			<img 	src="../Assets/avatar-boy-svgrepo-com.svg" 
+					class="dpicn"
+					alt="dp"> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<ul class="nav-upper-options"> 
+					<a href="./index.html"><li class="nav-option option1"> 
+						<img src="../Assets/dashboard-svgrepo-com.svg"
+							class="nav-img"
+							alt="dashboard"> 
+						<h3>Overview </h3> 
+					</li></a> 
+
+					<a href="./orders.html"><li class="nav-option option2"> 
+						<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+							class="nav-img"
+							alt="articles"> 
+						<h3>Orders</h3> 
+					</li></a> 
+
+					<a href="."><li class="nav-option option3"> 
+						<img src= "https://www.svgrepo.com/show/350286/commenting-outlined.svg"
+							class="nav-img"
+							alt="report"> 
+						<h3> Feedback</h3> 
+					</li></a> 
+					
+
+
+					<a href="./settings.html"><li class="nav-option option7"> 
+						<img src= "../Assets/setting-3-svgrepo-com.svg"
+							class="nav-img"
+							alt="settings"> 
+						<h3> Settings</h3> 
+					</li></a> 
+					
+
+					<a href="./logout"><li class="nav-option logout"> 
+						<img src= "../Assets/logout-svgrepo-com.svg"
+							class="nav-img"
+							alt="logout"> 
+						<h3>Logout</h3> 
+					</li></a> 
+
+				</ul> 
+			</nav>  
+		</div> 
+
+		<div class="main"> 
+            <h1>Menu Managment</h1>
+            
+
+            <div class="report-container"> 
+				<div class="Menu-report">
+					<div class="report-header"> 
+						<h1 class="MenuS">Menus</h1> 
+                        
+					</div> 
+					<div class="report-body">
+						<table>
+							<thead>
+							  <tr>
+								<th>Menu Image</th>
+                                <th>Menu Name</th>
+								<th>Category</th>
+								<th>Description</th>
+								<th>Price</th>
+                                
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr data-menu-id="1">
+								<td><img width="40" height="40" src="../Assets/image-svgrepo-com.svg" alt="" /></td>
+								<td>Fresh Juice 1</td>
+								<td>Drink</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+                                
+                                </td>
+							  </tr>
+                              <tr data-menu-id="2">
+								<td><img width="40" height="40" src="../Assets/image-svgrepo-com.svg" alt="" /></td>
+								<td value="Fresh juice">Fresh Juice 2</td>
+								<td>Dinner</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+                                
+							  </tr>
+                              <tr data-menu-id="3">
+								<td><img width="40" height="40" src="../Assets/image-svgrepo-com.svg" alt="" /></td>
+								<td>Fresh Juice 3</td>
+								<td>Drink</td>
+								<td>Fresh Juice</td>
+								<td>110</td>
+                               
+                                </td>
+							  </tr>
+							  <!-- Add more rows as needed -->
+							</tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div> 
+</body> 
+</html>

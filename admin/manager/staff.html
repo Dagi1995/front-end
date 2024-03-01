@@ -1,0 +1,352 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>Admin</title> 
+	<link rel="stylesheet"
+		href="style.css"> 
+	<link rel="stylesheet"
+		href="responsive.css"> 
+
+    <style>
+        dialog form {
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap:1rem;
+        }
+    </style>
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">Admin</div> 
+			<img src="../Assets/menu-svgrepo-com.svg"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> 
+		</div> 
+
+		<div class="searchbar"> 
+			<input type="text"
+				placeholder="Search"> 
+			<div class="searchbtn"> 
+			<img src="../Assets/search-svgrepo-com.svg"
+				 class="icn srchicn"
+				 alt="search-icon"> 
+			</div> 
+		</div> 
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+				class="icn"
+				alt=""> 
+			<div class="dp"> 
+			<img 	src="../Assets/avatar-boy-svgrepo-com.svg" 
+					class="dpicn"
+					alt="dp"> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<ul class="nav-upper-options"> 
+					<a href="./index.html"><li class="nav-option option1"> 
+						<img src="../Assets/dashboard-svgrepo-com.svg"
+							class="nav-img"
+							alt="dashboard"> 
+						<h3>Overview </h3> 
+					</li></a> 
+
+					<a href="./orders.html"><li class="nav-option option2"> 
+						<img src= "../Assets/cart-shopping-svgrepo-com.svg"
+							class="nav-img"
+							alt="articles"> 
+						<h3>Orders</h3> 
+					</li></a> 
+
+					<a href="./invoices.html"><li class="nav-option option3"> 
+						<img src= "../Assets/invoice-electronic-line-svgrepo-com.svg"
+							class="nav-img"
+							alt="report"> 
+						<h3> Invoices</h3> 
+					</li></a> 
+
+					<a href="./logs.html"><li class="nav-option option4"> 
+						<img src= "../Assets/audit-report-svgrepo-com.svg"
+							class="nav-img"
+							alt="institution"> 
+						<h3> Logs</h3> 
+					</li></a> 
+
+					<a href="./settings.html"><li class="nav-option highlight option6"> 
+						<img src= "../Assets/setting-3-svgrepo-com.svg"
+							class="nav-img"
+							alt="settings"> 
+						<h3> Settings</h3> 
+					</li></a> 
+
+					<a href="./logout"><li class="nav-option logout"> 
+						<img src= "../Assets/logout-svgrepo-com.svg"
+							class="nav-img"
+							alt="logout"> 
+						<h3>Logout</h3> 
+					</li></a> 
+
+				</ul> 
+			</nav>  
+		</div> 
+
+		<div class="main"> 
+            <h1>Staff Managment</h1>
+            <h6 style="margin-bottom: 3rem;">Hire, fire and manage your staff here.</h6>
+
+            <div class="box-container"> 
+                <div class="box box1"> 
+                    <div class="text"> 
+                        <section class="Active Staffs">
+                            <h2>Active Staffs</h2>
+                          
+                            <h3>+2</h3>
+                            <p>are currently active</p>
+                         </section>
+            
+                    </div> 
+
+                    <img src= "../Assets/cart-shopping-svgrepo-com.svg"
+                        alt="Views"> 
+                </div> 
+
+                <div class="box box2"> 
+                    <div class="text"> 
+                        <section class="">
+                            <h2>Suspended Staffs</h2>
+                           
+                            <h3>+5</h3>
+                            <p>are Suspended</p>
+                            
+                        </section>
+                    </div> 
+
+                    <img src= "../Assets/cart-cross-svgrepo-com.svg"
+                        alt="likes"> 
+                </div> 
+
+                <div class="box box3"> 
+                    <div class="text"> 
+                        <section class="staff-fired">
+                            <h2>
+                                Fired Staffs
+                            </h2>
+                            <h3>+13</h3>
+                            <p>are no longer in this company</p>                            
+                        </section>
+                    </div> 
+
+                     <img src= "../Assets/cart-check-svgrepo-com.svg"
+                        alt="likes"> 
+                </div> 
+            </div>
+
+            <div class="report-container"> 
+				<div class="staff-report">
+					<div class="report-header"> 
+						<h1 class="staffS">Staffs</h1> 
+                        <button id="modal">Add New Staff</button>
+						<dialog id="add-staff-dialog">
+							<form>
+							  <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+							  <h2 id="dialogid">Add Staff</h2>
+							  <p>All fields are required</p>
+							  <input type="hidden" value="" name="staff-id"  hidden/>
+							  
+							  <div class="form-group">
+								<label for="fName">First Name:</label>
+								<input id="fName" type="text" name="fName" placeholder="first name" required />
+							  </div>
+							  
+							  <div class="form-group">
+								<label for="lName">Last Name:</label>
+								<input id="lName" type="text" name="lName" placeholder="last name" required />
+							  </div>
+							  
+							  <div class="form-group">
+								<label for="email">Email:</label>
+								<input id="email" type="email" name="email" placeholder="Email" required />
+							  </div>
+
+							  <div class="form-group">
+								<label for="pNumber">Phone Number:</label>
+								<input id="pNumber" type="text" name="pNumber" placeholder="phone number" required />
+							  </div>
+
+                              <div class="form-group">
+								<label for="bDate">Birth Date:</label>
+								<input id="bDate" type="date" name="bDate" placeholder="" required />
+							  </div>
+
+
+							  <div class="form-group">
+								<label for="sex">Sex:</label>
+								<select id="sex" name="sex">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+							  </div>
+							  
+							  <div class="form-group">
+								<label for="access_level">Access Level:</label>
+								<select id="access_level" name="access_level">
+								  <option>Manager</option>
+								  <option>Waiter</option>
+								  <option>Chef</option>
+								</select>
+							  </div>
+
+							  <div class="form-group">
+                                <label>Suspend: </label>
+								<label class="switch"> 
+                                    <input type="checkbox" value="1">
+                                    <span class="slider round"></span>
+                                </label>
+							  </div>
+
+							  
+							  <div class="form-group">
+								<button type="submit" formmethod="post">Submit</button>
+							  </div>
+							</form>
+						  </dialog>
+					</div> 
+					<div class="report-body">
+						<table>
+							<thead>
+							  <tr>
+								<th>Staff Id</th>
+                                <th>First Name</th>
+								<th>Last Name</th>
+								<th>Role</th>
+								<th>Status</th>
+                                <th>Actions</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr data-staff-id="1">
+								<td>1</td>
+								<td>Abebe</td>
+								<td>Kebede</td>
+								<td>Manager</td>
+								<td><span class="label label-success">Active</span></td>
+                                <td class="actions">
+                                    <button class="edit-modal">Manage</button>
+                                    <button class="removeBtn">Fire</button>
+                                </td>
+							  </tr>
+                              <tr data-staff-id="2">
+								<td>2</td>
+								<td>Semere</td>
+								<td>Dinne</td>
+								<td>Waiter</td>
+								<td><span class="label label-warning">Suspended</span></td>
+                                <td class="actions">
+                                    <button class="edit-modal">Manage</button>
+                                    <button class="removeBtn">Fire</button>
+                                </td>
+							  </tr>
+                              <tr data-staff-id="3">
+								<td>3</td>
+								<td>Samrawit</td>
+								<td>Semere</td>
+								<td>Chef</td>
+								<td><span class="label label-cancelled">Fired</span></td>
+                                <td class="actions">
+                                    <button class="edit-modal">Manage</button>
+                                    <button class="removeBtn">Fire</button>
+                                </td>
+							  </tr>
+							  <!-- Add more rows as needed -->
+							</tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div> 
+	<script>
+        const dialog = document.getElementById('add-staff-dialog');
+		const jsbutton = document.getElementById('jsbutton');
+		const modal = document.getElementById('modal');
+		// edit dialog
+		const editDialogs = document.querySelectorAll(".edit-modal");
+
+
+		modal.addEventListener('click', (event) => {
+		dialog.showModal();
+		});
+
+		jsbutton && jsbutton.addEventListener('click', (event) => {
+            dialog.close();
+            fillDialogFields(null);
+		});
+
+		function fillDialogFields(row) {
+		const form = dialog.children.item(0);
+
+		console.log(form)
+		if(row != null) {
+
+			form.children.item(1).textContent = "Edit staff";
+			form.elements.fName.value = row.firstName;
+			form.elements.lName.value = row.lastName;
+			form.elements.access_level.value = row.role;
+			// form.elements.status.value = row.status;
+			form.elements["staff-id"].value = row.id
+		} else {
+			form.children.item(1).textContent = "Add staff";
+			form.elements.name.value = "";
+			form.elements.category.value = "";
+			form.elements.description.value = "";
+			form.elements.price.valueAsNumber = "";
+		}
+
+		}
+
+
+		editDialogs.forEach( item  => {
+		const parent = item.parentNode.parentElement;
+		const children = parent.children;
+		const editBtn = children.item(5).children.item(0);
+
+		editBtn.addEventListener("click", (e) => {
+			const row = {
+			firstName : children.item(1).firstChild.textContent,
+			lastName : children.item(2).firstChild.textContent,
+			role : children.item(3).firstChild.textContent,
+			status : children.item(4).firstChild.textContent,
+			id : parent.getAttribute('data-staff-id')
+			}
+
+            console.log(row);
+		
+			fillDialogFields(row);
+			dialog.showModal();
+		})
+
+		});
+    </script> 
+</body> 
+</html>
